@@ -1,0 +1,89 @@
+@font-face {
+  font-family: "Inter";
+  src: url("fonts/Inter-Regular.woff2") format("woff2"), url("fonts/Inter-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: "Inter";
+}
+
+body {
+  background-color: #e0dddd;
+}
+
+.App {
+  text-align: center;
+  
+}
+
+.header {
+  color: #645a5a;
+}
+
+.App .item-todo {
+  padding: 5px 14px;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  margin: 0 auto;
+  text-align: left;
+  margin-top: 15px;
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: -10px -10px 15px rgba(255,255,255,0.5),
+            10px 10px 15px rgba(70,70,70,0.12);
+}
+
+.App .item-todo .item-text {
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.App input {
+  padding: 16px 32px 16px 15px;
+  border-radius: 4px 0 0 4px;
+  border: none;
+  outline: none;
+  background: transparent;
+  /* box-shadow: 7px 8px 10px 0px rgba(0, 0, 0, 0.5); */
+  box-shadow: 2px -10px 15px rgba(255,255,255,0.5),
+  10px 10px 15px rgba(70,70,70,0.12);
+  font-family: "Inter";
+
+}
+
+.App input[type="text"]:focus {
+  font-family: "Inter";
+
+}
+
+.App button {
+  padding: 16px 20px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 8px -10px 15px rgba(255,255,255,0.5),
+  10px 10px 15px rgba(70,70,70,0.12);
+  color: rgb(0, 0, 0);
+  text-transform: capitalize;
+  background-color: #e0dddd;
+}
+
+.App .item-todo .item-delete {
+  cursor: pointer;
+  font-size: 22px;
+  color: #dea2a2;
+}
+
+.strike {
+  text-decoration: 2px solid pink line-through;
+}
+
+.item-text {
+  color: #645a5a;
+}
