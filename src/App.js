@@ -5,43 +5,24 @@ import ToDoForm from './ToDoForm';
 
 function App() {
   const defaultTodo = JSON.parse(localStorage.getItem('toDoList'));
-  // console.log('defaultTodo', defaultTodo)
-
   const [todos, setTodos] = useState(defaultTodo || []);
-
-  // console.log('todos', todos)
-
   const addTask = (userInput) => {
-
-    // console.log('userInput', userInput)
- 
     if(userInput) {
       const newItem = {
         id: Math.random().toString(36).substring(2,9),
         task: userInput,
         complete: false
       }
-      // console.log('newItem', newItem)
-
-      setTodos([  ...todos, newItem ] )
-      // console.log('JSON', JSON.stringify([  ...todos, newItem ]))
-
-      // console.log('newItem2', newItem)
-      
+      setTodos([  ...todos, newItem ] )      
       localStorage.setItem('toDoList', JSON.stringify([  ...todos, newItem ]))
     }
   }
-
-  
-    
-  
-
   const removeTask = (id) => {
-    
-    // console.log('newArray', newArray)
-
-    setTodos([...newArray.filter((todo) => todo.id !== id)])
-    
+    console.log('id', id)
+    // меняю стейт
+    setTodos([...todos.filter((todo) => todo.id !== id)])
+    // записываю в локальное
+    localStorage.setItem('toDoList', JSON.stringify([...todos.filter((todo) => todo.id !== id)]))
   }
 
   const handleToggle = (id) => {
